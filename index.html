@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Qiskit Fall Fest — Shoolini University</title>
+    <meta name="description" content="Qiskit Fall Fest — Shoolini University • Matrix-inspired hacker aesthetic. Responsive, fast, and accessible." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Qmode.css">
+  </head>
+  <body class="bg-background text-foreground antialiased">
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 overflow-hidden select-none">
+      <div class="matrix-rain text-secondary/40 absolute left-10 text-5xl hacker-text">101010101010</div>
+      <div class="matrix-rain text-secondary/40 absolute left-1/2 text-5xl hacker-text">QFF25QISKIT</div>
+      <div class="matrix-rain text-secondary/40 absolute right-12 text-5xl hacker-text">0101010101</div>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-background/90 backdrop-blur border-b border-token">
+      <div class="container mx-auto flex items-center justify-between px-4 py-3">
+        <a href="#home" class="flex items-center gap-2 hacker-text text-secondary hover:opacity-90">
+          <span class="w-2.5 h-2.5 rounded-full bg-primary quantum-pulse"></span>
+          <span class="font-bold tracking-wider">QFF’25 x Shoolini University</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#about" class="hover:underline">About</a>
+          <a href="#schedule" class="hover:underline">Schedule</a>
+          <a href="#speakers" class="hover:underline">Speakers</a>
+          <a href="#tracks" class="hover:underline">Tracks</a>
+          <a href="#faq" class="hover:underline">FAQ</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="#register" class="btn btn-primary hacker-text">Register</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="home" class="relative section-pad">
+      <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight hacker-text glitch-text neon-glow" data-text="Qiskit Fall Fest 2025">
+            Qiskit Fall Fest 2025
+          </h1>
+          <p class="mt-6 text-lg md:text-xl text-muted max-w-prose">
+            A student-led celebration of quantum computing at <span class="text-secondary font-semibold">Shoolini University</span> —
+            workshops, talks, and hands-on hacking with the <span class="text-primary font-semibold">Qiskit</span> ecosystem.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#register" class="btn btn-primary">[Init_journey]</a>
+            <a href="#about" class="btn btn-secondary">[Learn_more]</a>
+          </div>
+          <div class="mt-6 text-sm text-muted hacker-text">#QFF25 #QiskitFallFest • Organized by Quantum Elite Scholar’s Society</div>
+        </div>
+        
+
+        <section class="section-pad">
+          <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold hacker-text mb-6"></h2>
+            <div class="flex justify-center items-center">
+              <img
+                id="quantumImage"
+                src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Crop_Einstein.png"
+                alt="Quantum Circuit"
+                class="quantum-image"
+              />
+            </div>
+          </div>
+        </section>
+
+        <div class="relative">
+          <div class="absolute -top-8 -left-8 w-24 h-24 rounded-full bg-secondary/20 blur-2xl"></div>
+          <div class="absolute -bottom-8 -right-10 w-28 h-28 rounded-full bg-primary/20 blur-2xl"></div>
+          <div class="card p-6 md:p-8 card-hover">
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div class="p-4 rounded-lg bg-muted/30">
+                <div class="text-3xl font-bold text-secondary">10+</div>
+                <div class="text-xs text-muted">Sessions</div>
+              </div>
+              <div class="p-4 rounded-lg bg-muted/30">
+                <div class="text-3xl font-bold text-secondary">7</div>
+                <div class="text-xs text-muted">Days</div>
+              </div>
+              <div class="p-4 rounded-lg bg-muted/30">
+                <div class="text-3xl font-bold text-secondary">300+</div>
+                <div class="text-xs text-muted">Participants</div>
+              </div>
+            </div>
+            <div class="mt-6 text-sm text-muted">
+              Featuring hands‑on labs, VQC demos, CSP‑powered puzzles, and a beginner‑friendly quantum hackathon.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-pad bg-card">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold hacker-text mb-6">About the Fest</h2>
+        <p class="text-muted max-w-3xl">
+          Qiskit Fall Fest is a global series of quantum events hosted by students for students. At Shoolini University, our edition blends
+          foundational concepts with practical labs using <span class="text-primary font-semibold">Qiskit</span> and real‑world examples from
+          <span class="text-secondary font-semibold">Quantum Machine Learning</span>, quantum error suppression, and more.
+        </p>
+
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl mb-2 hacker-text">Workshops</h3>
+            <p class="text-muted">From qubits to circuits, learn-by-doing with guided notebooks and live coding.</p>
+          </div>
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl mb-2 hacker-text">Talks</h3>
+            <p class="text-muted">Hear from researchers and industry mentors on QML, error mitigation, and applications.</p>
+          </div>
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl mb-2 hacker-text">Hackathon</h3>
+            <p class="text-muted">Team up and build quantum mini‑projects — mentorship, swag, and prizes included.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="section-pad">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold hacker-text mb-6">Schedule</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl">Day 1 — Kickoff</h3>
+            <ul class="mt-3 space-y-2 text-sm text-muted">
+              <li>Opening Keynote &amp; Intro to Qiskit</li>
+              <li>Hands‑on: Quantum Circuits 101</li>
+              <li>Lab: Noise &amp; Error Suppression</li>
+            </ul>
+          </div>
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl">Day 2 — QML Focus</h3>
+            <ul class="mt-3 space-y-2 text-sm text-muted">
+              <li>Talk: Variational Quantum Classifiers</li>
+              <li>Workshop: Qiskit Patterns Workflow</li>
+              <li>Evening: Lightning Demos</li>
+            </ul>
+          </div>
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl">Day 3 — Hack &amp; Showcase</h3>
+            <ul class="mt-3 space-y-2 text-sm text-muted">
+              <li>Hackathon Sprint</li>
+              <li>Project Showcase &amp; Awards</li>
+              <li>Closing &amp; Next Steps</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="speakers" class="section-pad bg-card">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold hacker-text mb-8">Speakers & Mentors</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="card p-5 card-hover">
+            <header class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center qubit-spin">⚛️</div>
+              <div>
+                <h3 class="font-semibold">Raja Babu Jamatia</h3>
+                <p class="text-xs text-muted">Organizer • Quantum Elite Scholar’s Society</p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted">Talk: Enhancing Biometrics with Quantum Techniques</p>
+          </article>
+          <article class="card p-5 card-hover">
+            <header class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center qubit-spin">🧠</div>
+              <div>
+                <h3 class="font-semibold">Guest Mentor</h3>
+                <p class="text-xs text-muted">QML Researcher</p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted">Workshop: Variational Circuits & Noise</p>
+          </article>
+          <article class="card p-5 card-hover">
+            <header class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center qubit-spin">🧪</div>
+              <div>
+                <h3 class="font-semibold">Industry Speaker</h3>
+                <p class="text-xs text-muted">Quantum Engineer</p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted">Talk: Real‑world Qiskit Patterns</p>
+          </article>
+          <article class="card p-5 card-hover">
+            <header class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center qubit-spin">📚</div>
+              <div>
+                <h3 class="font-semibold">Student Mentor</h3>
+                <p class="text-xs text-muted">Hands‑on Labs</p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted">Lab: From Classical ML to QML</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tracks" class="section-pad">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold hacker-text mb-6">Event Highlights</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl">Beginner Track</h3>
+            <p class="text-muted mt-2">No prior quantum experience? Start here. Learn bits → qubits, gates, circuits, and simple algorithms.</p>
+          </div>
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl">QML Track</h3>
+            <p class="text-muted mt-2">Build VQCs for classification (e.g., breast cancer datasets), understand training dynamics & noise.</p>
+          </div>
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl">Applied Labs</h3>
+            <p class="text-muted mt-2">Qiskit Patterns workflow, error mitigation/suppression, and practical circuit depth optimization.</p>
+          </div>
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl">Hackathon</h3>
+            <p class="text-muted mt-2">Form teams, ideate, and ship a mini‑project. Judging rubric prioritizes clarity, novelty, and learning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="register" class="section-pad bg-card">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold hacker-text">Ready to join?</h2>
+        <p class="mt-3 text-muted max-w-2xl mx-auto">Limited seats. Register early to get workshop access, mentor slots, and swag.</p>
+        <div class="mt-6 flex flex-wrap gap-3 justify-center">
+          <a class="btn btn-primary" href="#">Register Now</a>
+          <a class="btn btn-secondary" href="#faq">View FAQ</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section-pad">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold hacker-text mb-6">FAQ</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold">Is this beginner‑friendly?</summary>
+            <p class="mt-2 text-sm text-muted">Yes. Day 1 covers foundations, and mentors are available for help throughout the fest.</p>
+          </details>
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold">Do I need prior Qiskit knowledge?</summary>
+            <p class="mt-2 text-sm text-muted">No, we’ll provide starter notebooks and walkthroughs.</p>
+          </details>
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold">Will there be certificates?</summary>
+            <p class="mt-2 text-sm text-muted">Participation certificates will be provided to attendees who complete the workshops.</p>
+          </details>
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold">How do I form a team?</summary>
+            <p class="mt-2 text-sm text-muted">We’ll host a team‑forming mixer on Day 2 morning; solo participation is also welcome.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo-section">
+        <p class="hacker-text">In Partnership & Collaboration with</p>
+        <div class = "px-2 py-4 flex md:flex-row items-center justify-between gap-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" />
+        <img src="https://cdn.npfs.co/uploads/template/384/1077/publish/images/su-logo.png?1731324680" alt="Qiskit Logo" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Qiskit-Logo.svg/2052px-Qiskit-Logo.svg.png" alt="Company Logo" />
+        <img src="https://qworld.lu.lv/wp-content/uploads/2019/10/qworld_logo2-300x216.png" alt="Organisation Logo" />
+
+        
+        </div>
+    </section>
+
+    <footer class="border-t border-token">
+      <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-muted">© 2025 Qiskit Fall Fest — Shoolini University. Organized by Quantum Elite Scholar’s Society.</p>
+        <div class="flex items-center gap-3 text-sm">
+          <a href="#" class="hover:underline">Code of Conduct</a>
+          <span class="opacity-50">•</span>
+          <a href="#" class="hover:underline">Contact</a>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
