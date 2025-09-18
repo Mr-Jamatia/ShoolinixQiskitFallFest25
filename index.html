@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Qiskit Fall Fest — Shoolini University</title>
+    <meta name="description" content="Qiskit Fall Fest — Shoolini University • Matrix-inspired hacker aesthetic. Responsive, fast, and accessible." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css">
+
+  
+    <link rel="stylesheet" href="testmodel.css">
+  </head>
+
+
+
+
+
+
+  <body class="bg-background text-foreground antialiased">
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 overflow-hidden select-none">
+      <div class="matrix-rain text-secondary/40 absolute left-10 text-5xl hacker-text">101010101010</div>
+      <div class="matrix-rain text-secondary/40 absolute left-1/2 text-5xl hacker-text">QFF25QISKIT</div>
+      <div class="matrix-rain text-secondary/40 absolute right-12 text-5xl hacker-text">0101010101</div>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-background/90 backdrop-blur border-b border-token">
+      <div class="container mx-auto flex items-center justify-between px-4 py-3">
+        <a href="#home" class="flex items-center gap-2 hacker-text text-secondary hover:opacity-90">
+          <span class="w-2.5 h-2.5 rounded-full bg-primary quantum-pulse"></span>
+          <span class="font-bold tracking-wider">QFF’25 x Shoolini University</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#about" class="hover:underline">About</a>
+          <a href="#schedule" class="hover:underline">Schedule</a>
+          <a href="#speakers" class="hover:underline">Speakers</a>
+          <a href="#tracks" class="hover:underline">Tracks</a>
+          <a href="#faq" class="hover:underline">FAQ</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScv76n_7nu--jn-SxTtdGIrQNgRYAQNIUScy4eSyMjRl-yiIQ/viewform?usp=dialog" class="btn btn-primary hacker-text">Register</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="home" class="relative section-pad">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 class="text-4xl mt-28 md:text-6xl font-extrabold leading-tight hacker-text glitch-text neon-glow" data-text="Qiskit Fall Fest 2025">
+              Qiskit Fall Fest 2025
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-muted max-w-prose">
+              A student-led celebration of quantum computing at <span class="text-secondary font-semibold">Shoolini University</span> —
+              workshops, talks, and hands-on hacking with the <span class="text-primary font-semibold">Qiskit</span> ecosystem.
+            </p>
+
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#register" class="btn btn-primary">Init_journey</a>
+              <a href="#about" class="btn btn-secondary">Learn_more</a>
+            </div>
+            <div class="mt-6 text-sm text-muted hacker-text">#QFF25 #QiskitFallFest • Powered by IBM Quantum and Qiskit </div>
+          </div>
+          
+          <div class="relative min-w-0">
+            <div class="absolute -top-8 -left-8 w-24 h-24 rounded-full bg-secondary/20 blur-2xl"></div>
+            <div class="absolute -bottom-8 -right-10 w-24 h-24 rounded-full bg-primary/20 blur-2xl"></div>
+            <div class="card p-6 md:p-8 card-hover">
+              <div class="grid grid-cols-3 gap-4 text-center">
+                <div class="p-4 rounded-lg bg-muted/30">
+                  <div class="text-3xl font-bold text-secondary">10+</div>
+                  <div class="text-xs text-muted">Sessions</div>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                  <div class="text-3xl font-bold text-secondary">7</div>
+                  <div class="text-xs text-muted">Days</div>
+                </div>
+                <div class="p-4 rounded-lg bg-muted/30">
+                  <div class="text-3xl font-bold text-secondary">300+</div>
+                  <div class="text-xs text-muted">Participants</div>
+                </div>
+              </div>
+              <div class="mt-6 text-sm text-muted">
+                Featuring hands‑on labs, VQC demos, CSP‑powered puzzles, and a beginner‑friendly quantum hackathon.
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+    <section class="section-pad">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold hacker-text mb-6"></h2>
+        <div class="flex justify-center items-center">
+          <img
+            id="quantumImage"
+            src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Crop_Einstein.png"
+            alt="Quantum Circuit"
+            class="quantum-image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-pad bg-card">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold hacker-text mb-6">About the Fest</h2>
+        <p class="text-muted max-w-3xl">
+          Qiskit Fall Fest is a global series of quantum events hosted by students for students. At Shoolini University, our edition blends
+          foundational concepts with practical labs using <span class="text-primary font-semibold">Qiskit</span> and real‑world examples from
+          <span class="text-secondary font-semibold">Quantum Machine Learning</span>, quantum error suppression, and more.
+        </p>
+
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl mb-2 hacker-text">Workshops</h3>
+            <p class="text-muted">From qubits to circuits, learn-by-doing with guided notebooks and live coding.</p>
+          </div>
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl mb-2 hacker-text">Talks</h3>
+            <p class="text-muted">Hear from researchers and industry mentors on QML, error mitigation, and applications.</p>
+          </div>
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl mb-2 hacker-text">Hackathon</h3>
+            <p class="text-muted">Team up and build quantum mini‑projects — mentorship, swag, and prizes included.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section id="schedule" class="section-pad">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold hacker-text mb-6">Schedule</h2>
+          <br><br>
+          <div class="main-timeline">
+
+      
+            <div class="timeline">
+              <a href="#" class="timeline-content">
+                <span class="timeline-day">Day 1</span>
+               
+                <div class="content">
+                  <h3 class="title">Kickoff & Orientation</h3>
+                  <p class="description">
+                    Learn basics of quantum computing and Qiskit tools with hands-on exercises.
+                  </p>
+                </div>
+              </a>
+            </div>
+      
+            <div class="timeline">
+              <a href="#" class="timeline-content">
+                <span class="timeline-day">Day 2</span>
+                <div class="content">
+                  <h3 class="title"> Quantum 101 Workshops</h3>
+                  <p class="description">
+                    Continue learning fundamental quantum circuits and Qiskit applications.
+                  </p>
+                </div>
+              </a>
+            </div>
+      
+            <div class="timeline">
+              <a href="#" class="timeline-content">
+                <span class="timeline-day">Day 3</span>
+                <div class="content">
+                  <h3 class="title">Workshops & Hackathon Launch</h3>
+                  <p class="description">
+                    Start of hackathon: Apply knowledge on real-world quantum challenges.
+                  </p>
+                </div>
+              </a>
+            </div>
+      
+            <div class="timeline">
+              <a href="#" class="timeline-content">
+                <span class="timeline-day">Day 4 </span>
+                <div class="content">
+                  <h3 class="title">Advanced Labs & Hackathon Work</h3>
+                  <p class="description">
+                    Continue hands-on labs while teams focus on hackathon project development.
+                  </p>
+                </div>
+              </a>
+            </div>
+      
+            <div class="timeline">
+              <a href="#" class="timeline-content">
+                <span class="timeline-day">Day 5</span>
+                <div class="content">
+                  <h3 class="title">Presentations, Awards & Feedback</h3>
+                  <p class="description">
+                    Teams present their projects, receive feedback, and awards are distributed.
+                  </p>
+                </div>
+              </a>
+            </div>
+      
+            <div class="timeline">
+              <a href="#" class="timeline-content">
+                <span class="timeline-day">Day 6 </span>
+                
+                <div class="content">
+                  <h3 class="title">Future Guidance & Closing Ceremony</h3>
+                  <p class="description">
+                    Inspirational talks on future quantum careers followed by closing remarks.
+                  </p>
+                </div>
+              </a>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+    
+    
+
+
+
+
+
+
+
+    
+    
+      
+    
+    
+
+   
+
+
+
+
+    <section id="speakers" class="section-pad bg-card">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold hacker-text mb-8">Speakers & Mentors</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <article class="card p-5 card-hover">
+            <header class="flex flex-col items-center gap-2">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/MrJamatia.png?20250916043542" alt="Photo of Raja Babu Jamatia" class="w-24 h-24 rounded-full object-cover ring-2 ring-primary" />
+              <div class="text-center">
+                <h3 class="font-semibold">Raja Babu Jamatia</h3>
+                <p class="text-xs text-muted">Lead Organizer <br> Quantum Elite Scholar’s Society</p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted text-center"> Mentor </p>
+          </article>
+
+
+          <article class="card p-5 card-hover">
+            <header class="flex flex-col items-center gap-2">
+              <img src="https://media.licdn.com/dms/image/v2/C5603AQH7YcmUGMdUGg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1517665281485?e=1761177600&v=beta&t=uzG8zjMAJGPeuLOyogADPL-fLIR_pYd7LCWqAfwQ50U" alt="Photo of Student Mentor" class="w-24 h-24 rounded-full object-cover ring-2 ring-primary" />
+              <div class="text-center">
+                <h3 class="font-semibold">Dr. Paweł Gora </h3>
+                <p class="text-xs text-muted"> Chairperson <br> QWorld </p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted text-center"> Guest Speaker </p>
+          </article>
+
+
+
+          
+
+
+
+          <article class="card p-5 card-hover">
+            <header class="flex flex-col items-center gap-2">
+              <img src="https://media.licdn.com/dms/image/v2/C5603AQHkP_PmikbfrQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516477369083?e=1761177600&v=beta&t=cCQDtAzIu_d6GuoRcdj4OdSyLDn0n0hD0w9J_Y9v2Ck" alt="Photo of Student Mentor" class="w-24 h-24 rounded-full object-cover ring-2 ring-primary" />
+              <div class="text-center">
+                <h3 class="font-semibold">Dr. Vesselin G. Gueorguiev </h3>
+                <p class="text-xs text-muted">Reseacher <br> Institute for Advanced Physical Studies </p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted text-center">Guest Speaker</p>
+          </article>
+
+
+          <article class="card p-5 card-hover">
+            <header class="flex flex-col items-center gap-2">
+              <img src="https://media.licdn.com/dms/image/v2/D5603AQFK_9S3Fwq5mw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718245432967?e=1761177600&v=beta&t=UIkexNzM5IyLXROajUguLroAmeUpqQrth821wEMsqWo" alt="Photo of Industry Speaker" class="w-24 h-24 rounded-full object-cover ring-2 ring-primary" />
+              <div class="text-center">
+                <h3 class="font-semibold">Sanjeet Bakshi</h3>
+                <p class="text-xs text-muted">Co-Organizer <br> Quantum Elite Scholar’s Society</p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted text-center"> Mentor </p>
+          </article>
+
+
+          <article class="card p-5 card-hover">
+            <header class="flex flex-col items-center gap-2">
+              <img src="https://media.licdn.com/dms/image/v2/C4D03AQHe6ZFWypXBmw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516812784919?e=1761177600&v=beta&t=0WC7DtTVH1OFT4VP8vu3rNj_h-kT-h5mB_PaFzlVonE" alt="Photo of Industry Speaker" class="w-24 h-24 rounded-full object-cover ring-2 ring-primary" />
+              <div class="text-center">
+                <h3 class="font-semibold">Prof. Dr. Pankaj Vaidya </h3>
+                <p class="text-xs text-muted">Dean  <br> Yogananda School of AI, Computers and Data Science </p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted text-center">Mentor & Speaker </p>
+          </article>
+
+
+
+          <article class="card p-5 card-hover">
+            <header class="flex flex-col items-center gap-2">
+              <img src="https://media.licdn.com/dms/image/v2/D4E03AQHRShBzD9EHxQ/profile-displayphoto-shrink_400_400/B4EZajcp22GQAg-/0/1746498922605?e=1761177600&v=beta&t=Gs3uaAubWGIzoKvQy2gK0isCiuhtFu2cbLPEyRZ2NdE" alt="Photo of Industry Speaker" class="w-24 h-24 rounded-full object-cover ring-2 ring-primary" />
+              <div class="text-center">
+                <h3 class="font-semibold">Dr. Anurag Rana</h3>
+                <p class="text-xs text-muted">Associate Professor  <br> Yogananda School of AI, Computers and Data Science </p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted text-center">Mentor & Speaker</p>
+          </article>
+
+
+
+          <article class="card p-5 card-hover">
+            <header class="flex flex-col items-center gap-2">
+              <img src="https://media.licdn.com/dms/image/v2/D5635AQHloSodff52LQ/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1732890954880?e=1758603600&v=beta&t=vgI4-QYiWIMzxFdSADktmMqiFr5RrLMxJvDrqX_3now" alt="Photo of Student Mentor" class="w-24 h-24 rounded-full object-cover ring-2 ring-primary" />
+              <div class="text-center">
+                <h3 class="font-semibold">Rohit Kumar </h3>
+                <p class="text-xs text-muted">Co-Organizer <br> Quantum Elite Scholar’s Society </p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted text-center"> Mentor </p>
+          </article>
+
+
+
+
+
+          <article class="card p-5 card-hover">
+            <header class="flex flex-col items-center gap-2">
+              <img src="https://media.licdn.com/dms/image/v2/D5603AQHmz3c2sZ0mjA/profile-displayphoto-shrink_400_400/B56ZN4XOBDGkAk-/0/1732891174282?e=1761177600&v=beta&t=wX2zDnqqc89mn2meTHWGg3_uKaaGUjQdb0XT3phkejc" alt="Photo of Student Mentor" class="w-24 h-24 rounded-full object-cover ring-2 ring-primary" />
+              <div class="text-center">
+                <h3 class="font-semibold">Lakshay sharma</h3>
+                <p class="text-xs text-muted">Co-Organizer <br> Quantum Elite Scholar’s Society</p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted text-center"> Mentor </p>
+          </article>
+
+          <article class="card p-5 card-hover">
+            <header class="flex flex-col items-center gap-2">
+              <img src="https://media.licdn.com/dms/image/v2/C4D03AQGK9827D6aNzA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1623424853972?e=1761177600&v=beta&t=8dnB8j9UA6jt9XE2luimguzQOSvYUj7KEqyBH0OrneY" alt="Photo of Student Mentor" class="w-24 h-24 rounded-full object-cover ring-2 ring-primary" />
+              <div class="text-center">
+                <h3 class="font-semibold">Amrit Chhetri </h3>
+                <p class="text-xs text-muted"> Editor-In-Chief <br> International Cyber Security Research Journal </p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted text-center">Guest Speaker</p>
+          </article>
+
+
+          <article class="card p-5 card-hover">
+            <header class="flex flex-col items-center gap-2">
+              <img src="https://media.licdn.com/dms/image/v2/D5603AQHhI1n7iB4EnA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1704345103139?e=1761177600&v=beta&t=tNhKOszcR5M5FwSu9w2fzBerSQrUqcZATp0c429HhKg" alt="Photo of Student Mentor" class="w-24 h-24 rounded-full object-cover ring-2 ring-primary" />
+              <div class="text-center">
+                <h3 class="font-semibold">Devyansh Pawar </h3>
+                <p class="text-xs text-muted">Co-Organizer <br> Quantum Elite Scholar’s Society </p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted text-center"> Mentor </p>
+          </article>
+
+
+          <article class="card p-5 card-hover">
+            <header class="flex flex-col items-center gap-2">
+              <img src="https://media.licdn.com/dms/image/v2/D4D03AQGxxEuZhkuGTA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1694094049509?e=1761177600&v=beta&t=aZzsB_x86y00DRuwxy4aJoYGOrP24iaoLaYUNydHnfU" alt="Photo of Student Mentor" class="w-24 h-24 rounded-full object-cover ring-2 ring-primary" />
+              <div class="text-center">
+                <h3 class="font-semibold">Dr. Puneet Kapoor</h3>
+                <p class="text-xs text-muted"> Senior Assistant Professor <br> YSAICDS | Former Infosys </p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted text-center"> Mentor </p>
+          </article>
+
+
+
+          <article class="card p-5 card-hover">
+            <header class="flex flex-col items-center gap-2">
+              <img src="https://media.licdn.com/dms/image/v2/D4E03AQGf6PsAiJCl4A/profile-displayphoto-shrink_400_400/B4EZN5E9bKHEAg-/0/1732903165460?e=1761177600&v=beta&t=wQ0I4ugD990JMqUv-7znDvEI1nrwYTvcWdwf-HFlFrk" alt="Photo of Student Mentor" class="w-24 h-24 rounded-full object-cover ring-2 ring-primary" />
+              <div class="text-center">
+                <h3 class="font-semibold">Mohammad Samad Sayed</h3>
+                <p class="text-xs text-muted">Executive Member <br> Quantum Elite Scholar’s Society </p>
+              </div>
+            </header>
+            <p class="mt-3 text-sm text-muted text-center"> Mentor </p>
+          </article>
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <section id="tracks" class="section-pad">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold hacker-text mb-6">Event Highlights</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl">Beginner Track</h3>
+            <p class="text-muted mt-2">No prior quantum experience? Start here. Learn bits → qubits, gates, circuits, and simple algorithms.</p>
+          </div>
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl">QML Track</h3>
+            <p class="text-muted mt-2">Build VQCs for classification (e.g., breast cancer datasets), understand training dynamics & noise.</p>
+          </div>
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl">Applied Labs</h3>
+            <p class="text-muted mt-2">Qiskit Patterns workflow, error mitigation/suppression, and practical circuit depth optimization.</p>
+          </div>
+          <div class="card p-6 card-hover">
+            <h3 class="font-semibold text-xl">Hackathon</h3>
+            <p class="text-muted mt-2">Form teams, ideate, and ship a mini‑project. Judging rubric prioritizes clarity, novelty, and learning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section id="register" class="section-pad bg-card">
+      <div class="container mx-auto px-4 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold hacker-text">Join the Quantum Revolution</h2> <br>
+
+          <p class="mt-3 text-muted max-w-2xl mx-auto">Be part of the most exciting quantum computing event of 2025. Connect with researchers, developers, and quantum enthusiasts from around the world. 
+              Register early to get workshop access, mentee & mentor slots, and swags.</p>
+
+              <div id="countdown-timer" class="mt-24 hacker-text text-2xl md:text-4xl neon-glow"></div>
+
+  
+          <div class="mt-8 grid sm:grid-cols-3 gap-4 text-center">
+
+          
+              <div class="p-4">
+                  <p class="text-2xl md:text-3xl font-bold text-secondary">11 - 15 th </p>
+                  <p class="text-sm text-muted">November 2025</p>
+              </div>
+              <div class="p-4">
+                  <p class="text-2xl md:text-3xl font-bold text-secondary">Global</p>
+                  <p class="text-sm text-muted">Virtual & In-Person</p>
+              </div>
+              <div class="p-4">
+                  <p class="text-2xl md:text-3xl font-bold text-secondary">Free</p>
+                  <p class="text-sm text-muted">Open to All</p>
+              </div>
+          </div>
+
+  
+          <div class="mt-6 flex flex-wrap gap-3 justify-center">
+              <a class="btn btn-primary" href="#">Let's Begin</a>
+              <a class="btn btn-secondary" href="#faq">View FAQ</a>
+          </div>
+      </div>
+  </section>
+
+   
+
+
+
+
+
+    <section id="gallery" class="section-pad bg-card">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold hacker-text mb-8"></h2>
+        <div class="gallery-container">
+          <div class="main-display">
+            </div>
+          <div class="thumbnails-bar">
+            <input type="radio" id="img-1" name="gallery-radio" checked />
+            <label for="img-1" class="gallery-item" data-img-src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Crop_Heisenberg.png">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Crop_Heisenberg.png" alt="A complex quantum circuit diagram." />
+            </label>
+
+            
+            <input type="radio" id="img-3" name="gallery-radio" />
+            <label for="img-3" class="gallery-item" data-img-src="https://i.ibb.co/JRdnbYqh/IBM-Quantum-133-Qubit-HERON-03.png">
+              <img src="https://i.ibb.co/JRdnbYqh/IBM-Quantum-133-Qubit-HERON-03.png" alt="A laptop screen displaying quantum code." />
+            </label>
+
+
+            
+            <input type="radio" id="img-3" name="gallery-radio" />
+            <label for="img-3" class="gallery-item" data-img-src="https://i.ibb.co/JRdnbYqh/IBM-Quantum-133-Qubit-HERON-03.png">
+              <img src="https://i.ibb.co/JRdnbYqh/IBM-Quantum-133-Qubit-HERON-03.png" alt="A laptop screen displaying quantum code." />
+            </label>
+
+            <input type="radio" id="img-2" name="gallery-radio" />
+            <label for="img-2" class="gallery-item" data-img-src="https://www.cnet.com/a/img/resize/c7cb26e927bebaa784fb55a01e71d7fecb15d2e3/hub/2019/06/26/3f76e99d-8055-46f3-8f27-558ee276b665/20180405-ibm-q-quantum-computer-02.jpg?auto=webp&fit=crop&height=675&width=1200">
+              <img src="https://www.cnet.com/a/img/resize/c7cb26e927bebaa784fb55a01e71d7fecb15d2e3/hub/2019/06/26/3f76e99d-8055-46f3-8f27-558ee276b665/20180405-ibm-q-quantum-computer-02.jpg?auto=webp&fit=crop&height=675&width=1200" alt="Students at a Qiskit Fall Fest event." />
+            </label>
+
+            <input type="radio" id="img-2" name="gallery-radio" />
+            <label for="img-2" class="gallery-item" data-img-src="https://www.exail.com/media/9294/exail-header-quantum-metrology-instruments_1920x1080.webp">
+              <img src="https://www.exail.com/media/9294/exail-header-quantum-metrology-instruments_1920x1080.webp" alt="Students at a Qiskit Fall Fest event." />
+            </label>
+
+            <input type="radio" id="img-2" name="gallery-radio" />
+            <label for="img-2" class="gallery-item" data-img-src="https://i.ibb.co/JwVjbG4J/ibm-quantum-system-one-ces-2020-50252942522-o-jpg.png">
+              <img src="https://i.ibb.co/JwVjbG4J/ibm-quantum-system-one-ces-2020-50252942522-o-jpg.png" alt="Students at a Qiskit Fall Fest event." />
+            </label>
+
+            <input type="radio" id="img-2" name="gallery-radio" />
+            <label for="img-2" class="gallery-item" data-img-src="https://media.licdn.com/dms/image/v2/D4D12AQE_c_AlajRTVA/article-cover_image-shrink_720_1280/B4DZgefI1IHAAM-/0/1752858143464?e=2147483647&v=beta&t=crlqMMsTjOa3vVDIGpoUWodKlStm13-bF86YZuu969Q">
+              <img src="https://media.licdn.com/dms/image/v2/D4D12AQE_c_AlajRTVA/article-cover_image-shrink_720_1280/B4DZgefI1IHAAM-/0/1752858143464?e=2147483647&v=beta&t=crlqMMsTjOa3vVDIGpoUWodKlStm13-bF86YZuu969Q" alt="Students at a Qiskit Fall Fest event." />
+            </label>
+            
+            </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="faq" class="section-pad">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold hacker-text mb-6">FAQ</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold">Is this beginner‑friendly?</summary>
+            <p class="mt-2 text-sm text-muted">Yes. Day 1 covers foundations, and mentors are available for help throughout the fest.</p>
+          </details>
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold">Do I need prior Qiskit knowledge?</summary>
+            <p class="mt-2 text-sm text-muted">No, we’ll provide starter notebooks and walkthroughs.</p>
+          </details>
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold">Will there be certificates?</summary>
+            <p class="mt-2 text-sm text-muted">Participation certificates will be provided to attendees who complete the workshops.</p>
+          </details>
+
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold">How do I form a team?</summary>
+            <p class="mt-2 text-sm text-muted">We’ll host a team‑forming mixer on Day 2 morning; solo participation is also welcome.</p>
+          </details>
+
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold"> How do I report any issues or misconduct during the event?</summary>
+            <p class="mt-2 text-sm text-muted">If you witness or experience any misconduct or violations of the Code of Conduct, you can report it by sending an email to official_contact: quantumelitescholarssociety1@gmail.com or calling the emergency contact: +91-XXXXXXXXXX. All reports are handled confidentially.</p>
+          </details>
+
+
+
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold"> Will there be networking opportunities with experts?</summary>
+            <p class="mt-2 text-sm text-muted">Absolutely. Qiskit Fall Fest offers several opportunities for participants to network with quantum computing experts, researchers, industry leaders, and fellow attendees.</p>
+          </details>
+
+
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold"> Can I get help if I face technical difficulties during the event?</summary>
+            <p class="mt-2 text-sm text-muted">Yes. A dedicated support team and mentors will be available throughout the event to assist with technical issues or any questions related to Qiskit and quantum computing concepts.</p>
+          </details>
+
+
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold"> Are there any participation fees? </summary>
+            <p class="mt-2 text-sm text-muted">No, the Qiskit Fall Fest 2025 participation is completely free of charge for registered attendees.</p>
+          </details>
+
+
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold"> How will my personal data be handled? </summary>
+            <p class="mt-2 text-sm text-muted">All personal data provided during registration will be used solely for event management purposes in compliance with applicable data protection laws. Data will not be shared without your consent.</p>
+          </details>
+
+
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold">Can I participate remotely?</summary>
+            <p class="mt-2 text-sm text-muted">Yes. Qiskit Fall Fest supports remote participation. All key sessions, workshops, and challenges are accessible online via provided links.</p>
+          </details>
+
+
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold"> Will I receive Qiskit Fall Fest Swags? </summary>
+            <p class="mt-2 text-sm text-muted">Yes! Registered participants who actively attend workshops and participate in challenges will receive exclusive Qiskit Fall Fest 2025 swags, such as event-branded umbrellas, water bottles, bags, stickers, and other goodies.</p>
+          </details>
+
+
+          <details class="card p-5">
+            <summary class="cursor-pointer font-semibold"> Do I get any financial support if I travel from outside to attend the event? </summary>
+            <p class="mt-2 text-sm text-muted">No. The Qiskit Fall Fest 2025 does not provide financial support for travel, accommodation, or any other personal expenses.
+              Participants are expected to manage their own travel arrangements and costs.
+              However, remote participation options are available for those who cannot travel.</p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section id="contact" class="section-pad">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold hacker-text mb-6 text-center">Visit Our Location</h2>
+          <div class="grid md:grid-cols-2 gap-6 items-center">
+
+            <div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1342.7014325074342!2d77.11945938295091!3d30.86373436081458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1758126213421!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <div class="space-y-4">
+              <div>
+                <h3 class="font-semibold text-lg">Our Address</h3>
+                <p>
+                  Shoolini University of Biotechnology and Management Sciences<br>
+                  Solan-Oachghat-Kumarhatti Highway<br>
+                  Solan, Himachal Pradesh 173229, India
+                </p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Hours</h3>
+                <p>
+                  Monday - Saturday: 9am - 5pm<br>
+                  Sunday: Closed
+                </p>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">Contact</h3>
+                <p>
+                  Email: <a href="mailto:quantumelitescholarssociety1@gmail.com" class="text-blue-500 hover:underline">quantumelitescholarssociety1@gmail.com</a><br>
+                  Phone: +91-XXX-XXX-XXXXX
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+
+    <section class="logo-section">
+      <p class="hacker-text hacker-text-bold text-xl">In Partnership & Collaboration with</p>
+      <div class="scrolling-logos">
+          <div class="logo-track">
+
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" />
+          <img src="https://cdn.npfs.co/uploads/template/384/1077/publish/images/su-logo.png?1731324680" alt="Shoolini University Logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Qiskit_01.png" alt="Qiskit Logo" />
+          <img src="https://qworld.lu.lv/wp-content/uploads/2019/10/qworld_logo2-300x216.png" alt="QWorld Logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" />
+          <img src="https://cdn.npfs.co/uploads/template/384/1077/publish/images/su-logo.png?1731324680" alt="Shoolini University Logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Qiskit-Logo.svg/2052px-Qiskit-Logo.svg.png" alt="Qiskit Logo" />
+          <img src="https://qworld.lu.lv/wp-content/uploads/2019/10/qworld_logo2-300x216.png" alt="QWorld Logo" />
+
+
+              </div>
+      </div>
+  </section>
+          
+
+
+
+    <footer class="border-t border-token">
+      <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-muted footer-text">© 2025 Qiskit Fall Fest <br> Organized by Quantum Elite Scholar’s Society.</p>
+        <div class="flex items-center gap-3 text-sm">
+          <a href="#" class="hover:underline">Code of Conduct</a>
+          <span class="opacity-50">•</span>
+          <a href="#" class="hover:underline">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <script src="QmodelFF.js"></script>
+  </body>
+</html>
