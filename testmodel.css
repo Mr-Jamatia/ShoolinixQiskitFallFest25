@@ -531,7 +531,7 @@ body {
     top: 15px;
     
     /* Mirror the border-radius to curve on the right */
-    border-radius: 0 100px 100px 0;
+    border-radius: 0 110px 110px 0;
     
     /* Mirror the border-right and border-left */
     border: 15px solid green;
