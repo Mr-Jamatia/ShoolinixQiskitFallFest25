@@ -430,7 +430,7 @@ body {
     content: "";
     height: 100%;
     width: 50%;
-    border-radius: 120px 0 0 120px;
+    border-radius: 150px 0 0 150px;
     border: 15px solid #0071BD; /* Default color, will override per item */
     border-right: none;
     position: absolute;
