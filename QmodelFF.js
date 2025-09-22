@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // Set the date and time for the countdown (e.g., Nov 11, 2025, 9:00 AM)
-const countDownDate = new Date("Nov 11, 2025 09:00:00").getTime();
+const countDownDate = new Date("Oct 13, 2025 09:00:00").getTime();
 
 // Update the count down every 1 second
 const x = setInterval(function() {
