@@ -740,3 +740,145 @@ body {
   grid-template-columns: 100px 1fr; /* Adjust the 100px to fit the longest day name */
   gap: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+.highlight-card {
+  position: relative;
+  background-color: #f6f3f31b;
+  border-radius: 4px;
+  overflow: hidden;
+  color: #e0e0e073;
+  transition: all 0.3s ease-in-out;
+  /* Use inset box-shadow for the border line */
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 120, 0, 0.8), /* The outer border line on the clipped path */
+    0 0 8px rgba(255, 120, 0, 0.3);
+  
+  clip-path: polygon(
+    17px 0%, 
+    100% 0%, 
+    100% calc(100% - 17px), 
+    calc(100% - 17px) 100%, 
+    0% 100%, 
+    0% 17px
+  ); 
+}
+
+.highlight-card:hover {
+  transform: translateY(-3px);
+  /* Update the inset box-shadow on hover for a brighter border */
+  box-shadow: 
+    inset 0 0 0 2px rgba(255, 120, 0, 1), /* Thicker, brighter outline */
+    0 0 5px 2px rgb(255, 119, 0),
+    0 0 15px 5px rgb(255, 119, 0),
+    0 0 30px 10px rgba(255, 120, 0, 0.4),
+    0 0 60px 15px rgba(255, 120, 0, 0.2);
+}
+
+
+
+
+
+
+
+/* Pseudo-element for the outer glowing frame */
+.highlight-card::before {
+  content: '';
+  position: absolute;
+  top: -2px; 
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid rgba(255, 120, 0, 0.7);
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(255, 120, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  /* UPDATED: Match the parent's double-cut corners */
+  clip-path: polygon(
+    17px 0%, 
+    100% 0%, 
+    100% calc(100% - 17px), 
+    calc(100% - 17px) 100%, 
+    0% 100%, 
+    0% 17px
+  );
+}
+
+/* Pseudo-element for the inner grid lines/circuit pattern */
+.highlight-card::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 1px dashed rgba(255, 0, 0, 0.234);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  /* Use gradients to simulate the internal lines */
+  background: 
+    linear-gradient(to right, rgba(225, 7, 7, 0.277) 1px, transparent 1px) 0 0 / 20px 100%,
+    linear-gradient(to bottom, rgba(255, 0, 0, 0.277) 1px, transparent 1px) 0 0 / 100% 20px;
+}
+
+
+/* Hover effects for pseudo-elements */
+.highlight-card:hover::before {
+  opacity: 1;
+}
+
+.highlight-card:hover::after {
+  opacity: 1;
+}
+
+.highlight-card h3,
+.highlight-card p {
+  color: #e0e0e0;
+}
+
+
+
+.content-box {
+  display: grid;
+  grid-template-columns: 100px 1fr; /* Adjust the 100px to fit the longest day name */
+  gap: 20px;
+}
+
+
+/* Add this new CSS class to your stylesheet */
+.program-list {
+  /* This ensures the bullets are visible */
+  list-style-type: disc; 
+  /* This adds spacing to the left for the bullets */
+  padding-left: 1.5rem; 
+  /* Resets any default margins that might hide the bullets */
+  margin-top: 0.5rem;
+}
+
+
+.date-stamp {
+  position: absolute;
+  top: 40%;
+  right: -39px; /* Adjust this value to move it closer or farther from the edge */
+  transform: translateY(-50%) rotate(270deg);
+  transform-origin: 0 0;
+  color: rgba(255, 120, 0, 0.7); /* Your desired neon orange color */
+  font-size: 0.8rem; /* Adjust font size as needed */
+  font-weight: bold;
+  white-space: nowrap; /* Prevents the text from wrapping */
+  z-index: 3; /* Ensure it's above other elements */
+}
