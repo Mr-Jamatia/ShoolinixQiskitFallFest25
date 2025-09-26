@@ -882,3 +882,27 @@ body {
   white-space: nowrap; /* Prevents the text from wrapping */
   z-index: 3; /* Ensure it's above other elements */
 }
+
+
+.grid {
+  display: grid;
+  /* Ensures all grid items in a row have the same height */
+  grid-auto-rows: 1fr; 
+}
+
+.highlight-card {
+  /* Makes the card content fill the entire height of the grid cell */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  /* Allows the content to expand and fill the available space */
+  flex-grow: 1; 
+}
+
+.p-6 {
+  /* Increase padding to increase the overall height of the card */
+  padding: 2rem 1.5rem;
+}
