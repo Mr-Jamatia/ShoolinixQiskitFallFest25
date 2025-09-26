@@ -873,7 +873,7 @@ body {
 .date-stamp {
   position: absolute;
   top: 38%;
-  right: -45px; /* Adjust this value to move it closer or farther from the edge */
+  right: -48px; /* Adjust this value to move it closer or farther from the edge */
   transform: translateY(-50%) rotate(270deg);
   transform-origin: 0 0;
   color: rgba(255, 120, 0, 0.7); /* Your desired neon orange color */
