@@ -928,7 +928,7 @@ body {
   animation: floatAnimation 18s infinite ease-in-out;
 }
 
-.float-1 { top: 10%; left: 10%; animation-duration: 22s; }
+.float-1 { top: 10%; left: 8%; animation-duration: 22s; }
 .float-2 { top: 70%; left: 83%; animation-duration: 26s; }
 .float-3 { top: 85%; left: 45%; animation-duration: 20s; }
 
