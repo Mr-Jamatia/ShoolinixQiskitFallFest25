@@ -204,8 +204,8 @@
 }
 
 .quantum-image {
-  width: 400px;       /* Set desired fixed width */
-  max-width: 100%;   /* Ensure responsive behavior */
+  width: 100%;       /* Set desired fixed width */
+  max-width: 560px;   /* Ensure responsive behavior */
   height: auto;
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
@@ -218,6 +218,16 @@
 }
 #quantumImage {
   opacity: 1;
+}
+
+
+/* Optional: slight hover zoom effect for interactivity*/
+.quantum-image:hover {
+  transform: scale(1.05);
+}
+
+
+
 }
 @media (max-width: 768px) {
   .quantum-image {
@@ -937,3 +947,66 @@ body {
   50%  { transform: translateY(-30px) rotate(10deg); }
   100% { transform: translateY(0) rotate(0deg); }
 }
+
+
+/* Base dark background for the card container */
+.green-box.p-6 {
+  background: oklch(0.02 0 0); /* dark base like your model */
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 255, 0, 0.4);
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+  color: #d4ffd4;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card Title */
+.green-box.p-6 h3 {
+  color: #00ff9d;
+  text-shadow: 0 0 6px rgba(0, 255, 150, 0.8);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Timezone rows */
+.green-box.p-6 .space-y-4 div {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.green-box.p-6 .space-y-4 div:hover {
+  background: rgba(0, 255, 0, 0.08);
+  border-radius: 6px;
+}
+
+/* Text styling */
+.green-box.p-6 span {
+  display: inline-block;
+  min-width: 90px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.green-box.p-6 span.font-bold {
+  text-align: left;
+  color: #9aff9a;
+}
+
+.green-box.p-6 .time-label {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.green-box.p-6 .day-label {
+  color: #99ffc8;
+  /*font-style: italic;*/
+}
+
+#timezones h3 {
+  color: var(--secondary); /* match heading color in base */
+}
+
