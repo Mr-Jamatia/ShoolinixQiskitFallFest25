@@ -1007,6 +1007,6 @@ body {
 }
 
 #timezones h3 {
-  color: var(--secondary); /* match heading color in base */
+  color: var(--secondary);
 }
 
