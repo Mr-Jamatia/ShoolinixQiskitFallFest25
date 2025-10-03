@@ -99,10 +99,10 @@ const x = setInterval(function() {
 // Global time zone 
 
   function updateTimezones() {
-    // FIX 1: Use 'en-US' locale for the time string to force consistent 12-hour format with uppercase AM/PM.
+    // Use 'en-US' locale for the time string to force consistent 12-hour format with uppercase AM/PM.
     const timeLocale = "en-US"; 
     
-    // FIX 2: Set hour12: true to ensure AM/PM is displayed.
+    // Set hour12: true to ensure AM/PM is displayed.
     const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
     const dayOptions = { weekday: 'long' };
     
