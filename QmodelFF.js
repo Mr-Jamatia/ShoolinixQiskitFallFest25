@@ -94,3 +94,54 @@ const x = setInterval(function() {
 
 
 
+
+
+// Global time zone 
+
+  function updateTimezones() {
+    // FIX 1: Use 'en-US' locale for the time string to force consistent 12-hour format with uppercase AM/PM.
+    const timeLocale = "en-US"; 
+    
+    // FIX 2: Set hour12: true to ensure AM/PM is displayed.
+    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true };
+    const dayOptions = { weekday: 'long' };
+    
+    // Locales for displaying the Day of the Week (kept regional for "vendredi" etc.)
+    const dayLocale = { 
+        london: "en-GB", 
+        moscow: "en-GB", 
+        delhi: "en-IN", 
+        paris: "fr-FR"
+    };
+
+    // London (GMT/BST)
+    document.getElementById("tz-london").textContent =
+      new Date().toLocaleTimeString(timeLocale, { timeZone: "Europe/London", ...timeOptions });
+    document.getElementById("day-london").textContent =
+      new Date().toLocaleDateString(dayLocale.london, { timeZone: "Europe/London", ...dayOptions });
+
+    // Moscow (MSK)
+    document.getElementById("tz-moscow").textContent =
+      new Date().toLocaleTimeString(timeLocale, { timeZone: "Europe/Moscow", ...timeOptions });
+    document.getElementById("day-moscow").textContent =
+      new Date().toLocaleDateString(dayLocale.moscow, { timeZone: "Europe/Moscow", ...dayOptions });
+
+    // Delhi (IST - Asia/Kolkata)
+    document.getElementById("tz-delhi").textContent =
+      new Date().toLocaleTimeString(timeLocale, { timeZone: "Asia/Kolkata", ...timeOptions });
+    document.getElementById("day-delhi").textContent =
+      new Date().toLocaleDateString(dayLocale.delhi, { timeZone: "Asia/Kolkata", ...dayOptions });
+
+    // Paris (CET/CEST - Europe/Paris)
+    document.getElementById("tz-paris").textContent =
+      new Date().toLocaleTimeString(timeLocale, { timeZone: "Europe/Paris", ...timeOptions });
+    document.getElementById("day-paris").textContent =
+      new Date().toLocaleDateString(dayLocale.paris, { timeZone: "Europe/Paris", ...dayOptions });
+  }
+
+  setInterval(updateTimezones, 1000);
+  updateTimezones();
+
+
+
+
