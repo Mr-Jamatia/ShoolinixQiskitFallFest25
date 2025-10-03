@@ -120,6 +120,7 @@ const x = setInterval(function() {
     document.getElementById("day-london").textContent =
       new Date().toLocaleDateString(dayLocale.london, { timeZone: "Europe/London", ...dayOptions });
 
+  
     // Moscow (MSK)
     document.getElementById("tz-moscow").textContent =
       new Date().toLocaleTimeString(timeLocale, { timeZone: "Europe/Moscow", ...timeOptions });
