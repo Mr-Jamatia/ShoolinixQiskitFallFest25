@@ -9,7 +9,7 @@
 
 **Shoolini x Qiskit Fall Fest 2025** is a prestigious, student-led celebration of **Quantum Computing**, organized by **Shoolini University of Biotechnology & Management Sciences** in collaboration with **IBM Quantum**.  
 
-This initiative commemorates **100 Years of Quantum Mechanics** and aims to bridge the gap between quantum theory and real-world applications through education, collaboration, and innovation. Visit directly event website [ ShooliniXQFF'25](https://mr-jamatia.github.io/ShoolinixQiskitFallFest25/) or through IBM Quantum Official page [Click Here](https://www.ibm.com/quantum/events/fall-fest-2025) .   
+This initiative commemorates **100 Years of Quantum Mechanics** and aims to bridge the gap between quantum theory and real-world applications through education, collaboration, and innovation. Visit directly event website [ QFF'25xShooliniUniversity](https://mr-jamatia.github.io/ShoolinixQiskitFallFest25/) or through IBM Quantum Official page [Click Here](https://www.ibm.com/quantum/events/fall-fest-2025) .   
 
 > *Empowering the next generation of quantum innovators — from fundamentals to advanced applications.*
 
