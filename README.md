@@ -75,6 +75,7 @@ The event welcomes participants from diverse backgrounds, including:
 | **Mohammad Samad Sayed** | Workshop & Hackathon Support | Quantum Elite Scholar’s Society|
 | **Devyansh Pawer** | Event Coodinatior | Quantum Elite Scholar’s Society|
 | **IBM Quantum Team** | Global Partner & Mentor | IBM Research |
+| **QWorld Team** | Guest Speaker & Industry Experts | QWorld |
 | **Quantum Elite Scholar’s Society** | Student Volunteer Teams | Shoolini University |
 | **Faculty Advisors** | Technical & Academic Support | Yogananda School of AI, Computers & Data Science |
 
