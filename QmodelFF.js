@@ -62,9 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// Set the date and time for the countdown *START* (Oct 13, 2025, 9:00 AM)
+const eventStartDate = new Date("Oct 13, 2025 09:00:00").getTime();
 
-  // Set the date and time for the countdown (e.g., Nov 11, 2025, 9:00 AM)
-const countDownDate = new Date("Oct 13, 2025 09:00:00").getTime();
+// Define the date and time for the event's *END* (Oct 18, 2025, 11:59 PM)
+const eventEndDate = new Date("Oct 18, 2025 17:30:00").getTime(); 
 
 // Update the count down every 1 second
 const x = setInterval(function() {
@@ -72,24 +74,37 @@ const x = setInterval(function() {
   // Get today's date and time
   const now = new Date().getTime();
 
-  // Find the distance between now and the count down date
-  const distance = countDownDate - now;
+  // Find the distance to the START date
+  const distanceToStart = eventStartDate - now;
+  
+  // Find the distance to the END date
+  const distanceToEnd = eventEndDate - now;
 
-  // Time calculations for days, hours, minutes and seconds
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="countdown-timer"
-  document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  if (distanceToStart > 0) {
+    // Phase 1: Countdown to START
+    const days = Math.floor(distanceToStart / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distanceToStart % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distanceToStart % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distanceToStart % (1000 * 60)) / 1000);
+    
+    document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
-  // If the count down is finished, write some text 
-  if (distance < 0) {
-    clearInterval(x);
+  } else if (distanceToStart <= 0 && distanceToEnd > 0) {
+    // Phase 2: Event is LIVE (from Oct 13 to Oct 18)
     document.getElementById("countdown-timer").innerHTML = "EVENT IS LIVE!";
+    
+  } else {
+    // Phase 3: Event is CLOSED (after Oct 18)
+    clearInterval(x);
+    document.getElementById("countdown-timer").innerHTML = "MISSION COMPLETE";
   }
 }, 1000);
+
+
+
+
+
 
 
 
