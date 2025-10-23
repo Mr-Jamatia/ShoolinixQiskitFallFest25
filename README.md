@@ -86,10 +86,11 @@ The event welcomes participants from diverse backgrounds, including:
 
 ## 📬 Contact Information  
   
- [mrjamatiaofficial@gmail.com](mailto:mrjamatiaofficial@gmail.com)  
+ 
  **Raja Babu Jamatia** — Lead Organizer    
  Representative, **Qiskit Fall Fest 2025** | **Shoolini University** <br>
- [Visit Linkedin](https://www.linkedin.com/in/raja-babu-jamatia-521609288/)
+ Email : [mrjamatiaofficial@gmail.com](mailto:mrjamatiaofficial@gmail.com)  
+ Connect to my [ Linkedin](https://www.linkedin.com/in/raja-babu-jamatia-521609288/)
 
 ---
 
